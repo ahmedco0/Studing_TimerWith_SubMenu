@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.enew.timetracker">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- <activity -->
+        <!-- android:name=".activity.HomeActivity" -->
+        <!-- android:label="@string/app_name" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".modules.AddChapterActivity"
+            android:label="@string/title_activity_add_chapter" />
+
+        <provider
+            android:name=".old.provider.TimeProvider"
+            android:authorities="TimeTracker" />
+
+        <activity
+            android:name=".modules.TestCategoryActivity"
+            android:label="@string/title_activity_test_category" />
+        <activity android:name=".old.others.home">
+
+        </activity>
+        <activity android:name=".old.others.CardViewActivity" />
+        <activity android:name=".old.others.regstration" />
+        <activity android:name=".old.others.delete_book" />
+        <activity android:name=".old.others.edit_page" />
+        <activity android:name=".modules.category.presentation.CategoryActivity" />
+        <activity android:name=".modules.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
